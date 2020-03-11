@@ -18,39 +18,37 @@
               <input type="checkbox" id="themer">
               Dark theme: <span aria-hidden="true"></span>
             </label>
-        <form class="transparent">
+        <form class="transparent" action = 'foo.php' method="post">
             <div class="form-inner">
                 <h3>Регистрация</h3>
                 
                 <br>
 
                 <label for="firstname">Имя</label>
-                <input type="text" id="firstname" required autocomplete="off">
+                <input type="text" id="firstname" required autocomplete="off" name = "firstname">
 
                 <label for="lastname">Фамилия</label>
-                <input type="text" id="lastname" required autocomplete="off">
+                <input type="text" id="lastname" required autocomplete="off" name = "lastname" >
 
                 <label for="email">E-mail</label>
-                <input type="email" id="email" required autocomplete="off">
+                <input type="email" id="email" required autocomplete="off"name = "email">
 
                 <label for="username">Логин</label>
-                <input type="text" id="username" required autocomplete="off">
+                <input type="text" id="username" required autocomplete="off" name = "username">
 
                 <form name="ValidationForm">
 
                     <label for="password">Пароль</label>
-                    <input id="password1" type="password" required autocomplete="off">
+                    <input id="password1" type="password" required autocomplete="off" name = "password">
 
                     <label for="password">Подтверждение пароль</label>
                     <input id="password2" type="password" required autocomplete="off">
-
-                </form>
-
-                <br><br>
-
-                <input type="submit" value="Отправить">
+                    <br><br>
+                    <input type="submit" value="Отправить">
+                </form>   
            </div>
          </form>
+
 
          <script type="text/javascript">
 
@@ -102,44 +100,4 @@
             });       
          </script>
     </body>
-    <?php
-            $connection = mysqli_connect('localhost', 'root', '');
-
-            if($connection == false)
-            {
-                /* echo '$connection = Нет; '; */
-                exit();
-            } else
-            {
-                /* echo '$connection = Да; ';*/
-            }
-
-            $db=mysqli_select_db($connection, "mysql");
-            //mysqli_set_charset("utf8");
-            if (!$connection || !$db)
-            {
-            exit(mysqli_error());
-            }
-
-
-            $name1 = $_POST['nick'];
-            $notes1 = $_POST['notes']; 
-            $date1 = $_POST['datetime'];
-
-            echo ($name1);
-            echo ($notes1);
-            echo ($date1);
-
-
-          /*  $result = mysqli_query("INSERT INTO `tablica`(`name`, `notes`, `date`) VALUES ('$name1','$notes1','$date')");
-            if ($result) {
-                echo "Данные успешно сохранены!";
-            }
-            else {
-                echo "Произошла ошибка, пожалуйста повторите попытку.";
-            } 
-*/
-?> 
-
-
 </html>
