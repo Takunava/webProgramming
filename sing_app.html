@@ -5,20 +5,10 @@
         <link rel="stylesheet" href="main.css">
         <script src='https://www.google.com/recaptcha/api.js'></script>
     </head>
-
-    <style id="inverter" media="none">
-        html { background-color: rgb(255, 255, 255); filter: invert(100%) }
-        body { background-color: inherit }
-        img:not([src*=".png"]), [style*="url("] { filter: invert(100%) }
-        .transparent:not([ background-image*= ".png"]), [url*="url("] {filter: invert(100%)}
-      </style>
     
     <body>
         <div class="wrap">
-            <label class="button">
-              <input type="checkbox" id="themer">
-              Dark theme: <span aria-hidden="true"></span>
-            </label>
+           
         <form class="transparent" action = 'foo.php' method="post">
             <div class="form-inner">
                 <h3>Регистрация</h3>
@@ -92,14 +82,5 @@ i
 
         </script>
 
-        <script>
-            var checkbox = document.getElementById('themer');
-            var invertor = document.getElementById('inverter');
-
-            checkbox.addEventListener('change', function () {
-            invertor.setAttribute('media', this.checked ? 'screen' : 'none');
-            invertor.textContent = invertor.textContent.trim();
-            });       
-         </script>
     </body>
 </html>
