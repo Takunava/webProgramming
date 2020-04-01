@@ -36,7 +36,7 @@ $userIsExist = false;
 if($result)
 {
     while ($row = mysqli_fetch_row($result)) {
-        if($username == $row[3] && $email == $row[4])
+        if($username == $row[3] || $email == $row[4])
             $userIsExist = true;
         }
     mysqli_free_result($result);
