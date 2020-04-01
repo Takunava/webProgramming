@@ -25,7 +25,7 @@ $input = $_POST['btn'];
 if($input == 'Да'){
   echo '<META http-equiv="refresh" content="0.2;URL=http://lab1/sing_in.html">';
 } else if ($input == 'Нет'){
-  echo '<META http-equiv="refresh" content="0.2;URL=http://lab1/index.html">';
+  echo '<META http-equiv="refresh" content="0.2;URL=http://lab1/index.php">';
 }
 
 ?>
