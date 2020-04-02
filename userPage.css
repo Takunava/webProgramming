@@ -159,6 +159,14 @@
                     font-weight: 700;
                     margin-bottom: 20px;
                 }
+                .profile-usertitle-h2{
+                    text-transform: uppercase;
+                    color: #58b4ff;
+                    font-size: 30px;
+                    text-align: center;
+                    font-weight: 700;
+                    margin-bottom: 20px;
+                }
                              
 
                 .profile-usertitle-h{
@@ -175,3 +183,30 @@
                     font-weight: 600;
                     margin-bottom: 7px;
                 }
+
+                .nav-link-button{
+                    align-content: center;
+                    text-align: center;
+                }
+
+                .button {
+                    text-decoration: none;
+                    outline: none;
+                    display: inline-block;
+                    padding: 15px 30px;
+                    margin: 10px 20px;
+                    border-radius: 10px;
+                    box-shadow: 0 0 40px 40px #58b4ff inset, 0 0 0 0 #58b4ff;
+                    text-transform: uppercase;
+                    font-weight: bold;
+                    letter-spacing: 2px;
+                    color: white;
+                    transition: .15s ease-in-out;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                  }
+                  .button:hover {
+                    box-shadow: 0 0 10px 0 #58b4ff inset, 0 0 10px 4px #58b4ff;
+                    color: #58b4ff;
+                  }
