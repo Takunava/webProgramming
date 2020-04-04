@@ -1,0 +1,113 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>About</title>
+
+        <link rel="stylesheet" href="css/aboutPage.css">
+        <link rel="stylesheet" href="bootstrap-4.0.0-dist/css/StartMain.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    </head>
+    
+    <style id="inverter" media="none">
+        html { background-color: rgb(255, 255, 255); filter: invert(100%) }
+        body { background-color: inherit }
+        img:not([src*=".png"]), [style*="url("] { filter: invert(100%) }
+        .transparent:not([ background-image*= ".png"]), [url*="url("] {filter: invert(100%)}
+    </style>
+
+    <body style="background: #000;">
+        <nav class="navbar navbar-expand-lg fixed-top ">
+            <a class="navbar-brand" href="startPage.html">WebSite</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse " id="navbarSupportedContent">
+                <ul class="navbar-nav mr-4">
+                    
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link " href="#"></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link " href="#"></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link " href="sing_up.html">Sing Up</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link " href="sing_in.html">Sing In</a>
+                    </li>
+                </ul>
+                
+            </div>
+        </nav>
+
+        <br><br>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-3">
+                    <div class="wrap">
+                        <label class="button">
+                          <input type="checkbox" id="themer">
+                          Light theme: <span aria-hidden="true"></span>
+                        </label>
+                    </div>
+                </div>
+                  <div class="col-6 heading"></div>
+                  <div class="col-3"></div>
+            </div>
+            
+            <div class="row">
+                <div class="col-3"></div>
+                  <div class="col-6 heading">
+                    Black Mirror: Bandersnatch
+                  </div>
+                  <div class="col-3"></div>
+            </div> 
+
+            <br>
+
+            <div class="row">
+                <div class="col-3"></div>
+                <div class="col-6 text-center">
+                  <img src="image/5.png" class="rounded mx-auto d-block">
+                </div>
+                <div class="col-3"></div>
+            </div> 
+
+            <br>
+
+            <div class="row">
+                <div class="col-2"></div>
+                <div class="col-8 text-center text">
+                    В «Брандашмыге» зрители принимают решения за основного персонажа, молодого программиста Стефана Батлера (Финн Уайтхед), 
+                    который адаптирует фэнтезийный роман в видеоигру в 1984 году. Среди других персонажей присутствуют Мохан Такур (Азим Чоудхри) и Колин Ритман (Уилл Поултер),
+                     которые работают в компании видеоигр, отец Стефана Питер Батлер (Крэйг Паркинсон) и терапевт Стефана доктор Хэйнс (Элис Лоу). 
+                     Фильм основан на запланированной одноимённой видеоигре от Imagine Software, которая не была выпущена в свет из-за банкротства компании. 
+                     «Брандашмыг» включает в себя элементы ужасов и научной фантастики, а также мета-комментарии и размышления о свободе воли.
+                </div>
+                <div class="col-2"></div>
+            </div> 
+    </div>
+
+    <footer style="flex-shrink: none;" class="py-4 bg-black text-white-50">
+        <div class="container text-center" style="color: white;">
+          <small>Copyright &copy; Your Website</small>
+        </div>
+    </footer>
+
+        <script>
+            var checkbox = document.getElementById('themer');
+            var invertor = document.getElementById('inverter');
+
+            checkbox.addEventListener('change', function () {
+            invertor.setAttribute('media', this.checked ? 'screen' : 'none');
+            invertor.textContent = invertor.textContent.trim();
+            });       
+         </script>
+    </body> 
+</html>

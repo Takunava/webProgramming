@@ -1,0 +1,45 @@
+body{
+    background: #000;
+}
+.heading{
+    text-transform: uppercase;
+    color: #58b4ff;
+    font-size: 30px;
+    text-align: center;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+img{
+    max-width: 500px;
+}
+.wrap {
+    margin: 0;
+    max-width: 40rem;
+    margin: 0 auto;
+    padding: 1.5rem;
+  }
+  .button {
+    background: #fff;
+    padding: 0.5rem 1.5rem;
+    color: #000;
+    border-radius: 0.25rem;
+  }
+  
+  .button [type="checkbox"] {
+    position: absolute;
+    left: -9999px;
+  }
+  
+  .button [type="checkbox"] + span::before {
+    content: 'off';
+  }
+  
+  .button [type="checkbox"]:checked + span::before {
+    content: 'on';
+  } 
+  .text{
+    color: #fff;
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 15px;
+  }
