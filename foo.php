@@ -1,8 +1,26 @@
 <?php
 include 'functions.php';
 
+$capcha = $_POST['g-recaptcha-response'];
 
-$connection = mysqli_connect('localhost', 'root', '', 'mysql');
+$url = 'https://www.google.com/recaptcha/api/siteverify';
+$params = array(
+    'secret' => '6LfrYOAUAAAAAJbkQXYz1sKLgGJEUFbgnD7R35Cg', 
+    'response' => $capcha,
+);
+$result = file_get_contents($url, false, stream_context_create(array(
+    'http' => array(
+        'method'  => 'POST',
+        'header'  => 'Content-type: application/x-www-form-urlencoded',
+        'content' => http_build_query($params)
+    )
+)));
+
+echo $result;
+
+if($result[0] == 'true'){
+  
+    $connection = mysqli_connect('localhost', 'root', '', 'mysql');
 
 if($connection == false){
     echo '$connection = Нет; ';
@@ -10,8 +28,6 @@ if($connection == false){
 } /*else {
     echo '$connection = Да; ';
 }*/
-
-
 if(!empty($_POST['firstname'])){
     $firstname = $_POST['firstname'];
 } else echo 'error';
@@ -53,7 +69,12 @@ if($userIsExist){
     }
     echo '<META http-equiv="refresh" content="0.2;URL=http://lab1/thanks.php">';
 
-}/*
+}
+}else {
+   
+}
+
+/*
 -- Необходимо сделать форму для уже существующего пользователя в системе(тип выдавать что пользователь уже имеентся в системе и предложиться авторизоваться)
 -- страничку пользоваетля
 -- капчу прикрутить 
