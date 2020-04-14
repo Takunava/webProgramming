@@ -8,6 +8,13 @@
         <link rel="stylesheet" href="bootstrap-4.0.0-dist/css/StartMain.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
         
+        <style id="inverter" media="none">
+            html { background-color: rgb(255, 255, 255); filter: invert(100%) }
+            body { background-color: inherit }
+            img:not([src*=".png"]), [style*="url("] { filter: invert(100%) }
+            .transparent:not([ background-image*= ".png"]), [url*="url("] {filter: invert(100%)}
+        </style>
+
     </head>
     
         <body style="background: black url(image/1.jpg) no-repeat;">
@@ -39,8 +46,6 @@
                 </div>
             </nav>
 
-            <!--<img class="d-block w-100" src="1.jpg">-->
-
             <form class="transparent" action = 'foo.php' method="post">
                 <div class="form-inner">
                     <h3>Регистрация</h3>
@@ -58,7 +63,20 @@
     
                     <label for="username">Логин</label>
                     <input type="text" id="username" required autocomplete="off" name = "username">
-    
+
+                    <label for="age">Возраст</label>
+                    <p><select class="selectage" name="list1">
+                        <option>Выберите свой возраст</option>
+                        <option>Мне 18 лет</option>
+                        <option>Нет 18 лет</option>
+                       </select>
+                    </p>
+
+                    <div class="radio">
+                        <div class="r1"><label><input type="radio" checked name="dva"/> Мужской</label> </div>
+                        <div class="r1"><label><input type="radio" name="dva"/> Женский</label></div>
+                    </div>
+                      
                     <form name="ValidationForm">
     
                         <label for="password">Пароль</label>
@@ -66,8 +84,9 @@
     
                         <label for="password">Подтверждение пароль</label>
                         <input id="password2" type="password" required autocomplete="off">
+
                         <div class="g-recaptcha" data-sitekey="6LfrYOAUAAAAAEgYxnnYw06ZaOiYHi95iLMmygmi"></div>
-                        <br><br>
+                    
                         <input type="submit" value="Отправить">
                     </form>   
                </div>
@@ -78,7 +97,17 @@
                   <small>Copyright &copy; Your Website</small>
                 </div>
             </footer>
-      
+            
+            <script>
+                var checkbox = document.getElementById('themer');
+                var invertor = document.getElementById('inverter');
+    
+                checkbox.addEventListener('change', function () {
+                invertor.setAttribute('media', this.checked ? 'screen' : 'none');
+                invertor.textContent = invertor.textContent.trim();
+                });       
+             </script>
+
             <script type="text/javascript" src='main.js'></script>
             <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
             <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
