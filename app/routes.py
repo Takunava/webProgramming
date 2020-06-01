@@ -2,8 +2,8 @@ from flask import render_template, redirect, url_for, request, flash
 from flask_login import login_user, login_required, logout_user
 from werkzeug.security import check_password_hash, generate_password_hash
 
-from sweater import app, db
-from sweater.models import Message, User
+from app import app, db
+from app.models import Message, User
 
 
 @app.route('/', methods=['GET'])
